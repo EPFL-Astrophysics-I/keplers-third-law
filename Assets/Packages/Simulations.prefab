@@ -1,0 +1,617 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6007851514279538589
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6007851514279538590}
+  - component: {fileID: 6007851514279538591}
+  - component: {fileID: 6007851514279538584}
+  m_Layer: 0
+  m_Name: Kepler Sim 4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6007851514279538590
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6007851514279538589}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6007851514375154930}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6007851514279538591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6007851514279538589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b7f0a8319d6e46428161c4b9fd40d15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paused: 0
+  numSubsteps: 10
+  resetAfterOnePeriod: 1
+  unitTime: 0
+  unitLength: 0
+  unitMass: 0
+  timeScale: 0.2
+  starMass: 1
+  starRadius: 0.3
+  starPosition: {x: -1.05, y: 0}
+  starAtFocus: 0
+  planet1Radius: 0.06
+  perihelionDistance: 0.7
+  startAtPerihelion: 0
+  eccentricity: 0.6
+  orbitDirection: 1
+  planet2Radius: 1
+  initPlanet2OffsetAngle: 45
+  star: {fileID: 0}
+  planet1: {fileID: 0}
+  planet2: {fileID: 0}
+  theta1: 0
+  theta2: 0
+  resetTimer: 0
+  currentForce: {x: 0, y: 0, z: 0}
+--- !u!114 &6007851514279538584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6007851514279538589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e647ccdc2668f41e3ae6acea3ab932af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  starPrefab: {fileID: 4649805569744889095, guid: 3da2dd3a369dd46b2bb01be773b8a084,
+    type: 3}
+  planet1Prefab: {fileID: 4649805569744889095, guid: 36c42e4487387446799b97d4e6a4eee0,
+    type: 3}
+  positionVector1Prefab: {fileID: 0}
+  orbit1Prefab: {fileID: 7263056567443626460, guid: 31a1961c80cc448b08f9d894f47e8315,
+    type: 3}
+  orbitSector1Prefab: {fileID: 0}
+  trail1Prefab: {fileID: 0}
+  forceVector1Prefab: {fileID: 0}
+  planet2Prefab: {fileID: 0}
+  orbitSector2Prefab: {fileID: 0}
+  positionVector2Prefab: {fileID: 0}
+  centerOfMassPrefab: {fileID: 0}
+  angularMomentumVectorPrefab: {fileID: 0}
+  semiMajorAxisPrefab: {fileID: 0}
+  semiMinorAxisPrefab: {fileID: 0}
+  ellipseCenterPrefab: {fileID: 2998273715610620008, guid: 6f08a9d3215a6429681895509b7dc6c7,
+    type: 3}
+  star: {fileID: 0}
+  planet1: {fileID: 0}
+  centerOfMass: {fileID: 0}
+  positionVector1: {fileID: 0}
+  orbit1: {fileID: 0}
+  orbitSector1: {fileID: 0}
+  planetTrailLR: {fileID: 0}
+  forceVector1: {fileID: 0}
+  angularMomentumVector: {fileID: 0}
+  planet2: {fileID: 0}
+  orbitSector2: {fileID: 0}
+  positionVector2: {fileID: 0}
+  semiMajorAxis: {fileID: 0}
+  semiMinorAxis: {fileID: 0}
+  ellipseCenter: {fileID: 0}
+--- !u!1 &6007851514375154929
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6007851514375154930}
+  m_Layer: 0
+  m_Name: Simulations
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6007851514375154930
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6007851514375154929}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 6007851514780120785}
+  - {fileID: 6007851514575595737}
+  - {fileID: 6007851515636280159}
+  - {fileID: 6007851514279538590}
+  - {fileID: 6007851516059903032}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6007851514575595736
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6007851514575595737}
+  - component: {fileID: 6007851514575595739}
+  - component: {fileID: 6007851514575595738}
+  m_Layer: 0
+  m_Name: Kepler Sim 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6007851514575595737
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6007851514575595736}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6007851514375154930}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6007851514575595739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6007851514575595736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b7f0a8319d6e46428161c4b9fd40d15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paused: 0
+  numSubsteps: 10
+  resetAfterOnePeriod: 1
+  unitTime: 0
+  unitLength: 0
+  unitMass: 0
+  timeScale: 0.1
+  starMass: 1
+  starRadius: 0.3
+  starPosition: {x: 0, y: 0}
+  starAtFocus: 1
+  planet1Radius: 0.06
+  perihelionDistance: 0.5
+  startAtPerihelion: 0
+  eccentricity: 0.75
+  orbitDirection: 1
+  planet2Radius: 1
+  initPlanet2OffsetAngle: 45
+  star: {fileID: 0}
+  planet1: {fileID: 0}
+  planet2: {fileID: 0}
+  theta1: 0
+  theta2: 0
+  resetTimer: 0
+  currentForce: {x: 0, y: 0, z: 0}
+--- !u!114 &6007851514575595738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6007851514575595736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e647ccdc2668f41e3ae6acea3ab932af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  starPrefab: {fileID: 4649805569744889095, guid: 3da2dd3a369dd46b2bb01be773b8a084,
+    type: 3}
+  planet1Prefab: {fileID: 4649805569744889095, guid: bc5ef29fa82484670addf08c1a0e5fd8,
+    type: 3}
+  positionVector1Prefab: {fileID: 0}
+  orbit1Prefab: {fileID: 7263056567443626460, guid: 29669dbb225b544e186a07fe7f8c9797,
+    type: 3}
+  orbitSector1Prefab: {fileID: 0}
+  trail1Prefab: {fileID: 0}
+  forceVector1Prefab: {fileID: 0}
+  planet2Prefab: {fileID: 0}
+  orbitSector2Prefab: {fileID: 0}
+  positionVector2Prefab: {fileID: 0}
+  centerOfMassPrefab: {fileID: 0}
+  angularMomentumVectorPrefab: {fileID: 0}
+  semiMajorAxisPrefab: {fileID: 6660150231560391241, guid: aef70a216f925408b938d8ed483c2f49,
+    type: 3}
+  semiMinorAxisPrefab: {fileID: 6660150231560391241, guid: 3a37ac223c690422990d68aa38a2c8a2,
+    type: 3}
+  ellipseCenterPrefab: {fileID: 0}
+  star: {fileID: 0}
+  planet1: {fileID: 0}
+  centerOfMass: {fileID: 0}
+  positionVector1: {fileID: 0}
+  orbit1: {fileID: 0}
+  orbitSector1: {fileID: 0}
+  planetTrailLR: {fileID: 0}
+  forceVector1: {fileID: 0}
+  angularMomentumVector: {fileID: 0}
+  planet2: {fileID: 0}
+  orbitSector2: {fileID: 0}
+  positionVector2: {fileID: 0}
+  semiMajorAxis: {fileID: 0}
+  semiMinorAxis: {fileID: 0}
+  ellipseCenter: {fileID: 0}
+--- !u!1 &6007851514780120784
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6007851514780120785}
+  - component: {fileID: 6007851514780120786}
+  - component: {fileID: 6007851514780120787}
+  m_Layer: 0
+  m_Name: Kepler Sim 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6007851514780120785
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6007851514780120784}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6007851514375154930}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6007851514780120786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6007851514780120784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b7f0a8319d6e46428161c4b9fd40d15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paused: 0
+  numSubsteps: 10
+  resetAfterOnePeriod: 1
+  unitTime: 0
+  unitLength: 0
+  unitMass: 0
+  timeScale: 0.1
+  starMass: 1
+  starRadius: 0.3
+  starPosition: {x: 0, y: 0}
+  starAtFocus: 0
+  planet1Radius: 0.06
+  perihelionDistance: 0.6
+  startAtPerihelion: 0
+  eccentricity: 0.6
+  orbitDirection: 1
+  planet2Radius: 1
+  initPlanet2OffsetAngle: 45
+  star: {fileID: 0}
+  planet1: {fileID: 0}
+  planet2: {fileID: 0}
+  theta1: 0
+  theta2: 0
+  resetTimer: 0
+  currentForce: {x: 0, y: 0, z: 0}
+--- !u!114 &6007851514780120787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6007851514780120784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e647ccdc2668f41e3ae6acea3ab932af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  starPrefab: {fileID: 4649805569744889095, guid: 3da2dd3a369dd46b2bb01be773b8a084,
+    type: 3}
+  planet1Prefab: {fileID: 4649805569744889095, guid: 36c42e4487387446799b97d4e6a4eee0,
+    type: 3}
+  positionVector1Prefab: {fileID: 6660150231560391241, guid: 338baf96693cf41b295c099ad3bc74e6,
+    type: 3}
+  orbit1Prefab: {fileID: 7263056567443626460, guid: 31a1961c80cc448b08f9d894f47e8315,
+    type: 3}
+  orbitSector1Prefab: {fileID: 0}
+  trail1Prefab: {fileID: 0}
+  forceVector1Prefab: {fileID: 0}
+  planet2Prefab: {fileID: 0}
+  orbitSector2Prefab: {fileID: 0}
+  positionVector2Prefab: {fileID: 0}
+  centerOfMassPrefab: {fileID: 0}
+  angularMomentumVectorPrefab: {fileID: 0}
+  semiMajorAxisPrefab: {fileID: 6660150231560391241, guid: c914934c9aa9a47eea494629efc50746,
+    type: 3}
+  semiMinorAxisPrefab: {fileID: 6660150231560391241, guid: 29e936dac31734474a6260c1e94f4f21,
+    type: 3}
+  ellipseCenterPrefab: {fileID: 0}
+  star: {fileID: 0}
+  planet1: {fileID: 0}
+  centerOfMass: {fileID: 0}
+  positionVector1: {fileID: 0}
+  orbit1: {fileID: 0}
+  orbitSector1: {fileID: 0}
+  planetTrailLR: {fileID: 0}
+  forceVector1: {fileID: 0}
+  angularMomentumVector: {fileID: 0}
+  planet2: {fileID: 0}
+  orbitSector2: {fileID: 0}
+  positionVector2: {fileID: 0}
+  semiMajorAxis: {fileID: 0}
+  semiMinorAxis: {fileID: 0}
+  ellipseCenter: {fileID: 0}
+--- !u!1 &6007851515636280158
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6007851515636280159}
+  - component: {fileID: 6007851515636280153}
+  - component: {fileID: 6007851515636280152}
+  m_Layer: 0
+  m_Name: Kepler Sim 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6007851515636280159
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6007851515636280158}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6007851514375154930}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6007851515636280153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6007851515636280158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b7f0a8319d6e46428161c4b9fd40d15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paused: 0
+  numSubsteps: 10
+  resetAfterOnePeriod: 1
+  unitTime: 0
+  unitLength: 0
+  unitMass: 0
+  timeScale: 0.1
+  starMass: 1
+  starRadius: 0.3
+  starPosition: {x: 0.9, y: 0}
+  starAtFocus: 0
+  planet1Radius: 0.06
+  perihelionDistance: 1.5
+  startAtPerihelion: 0
+  eccentricity: 0
+  orbitDirection: 1
+  planet2Radius: 1
+  initPlanet2OffsetAngle: 45
+  star: {fileID: 0}
+  planet1: {fileID: 0}
+  planet2: {fileID: 0}
+  theta1: 0
+  theta2: 0
+  resetTimer: 0
+  currentForce: {x: 0, y: 0, z: 0}
+--- !u!114 &6007851515636280152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6007851515636280158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e647ccdc2668f41e3ae6acea3ab932af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  starPrefab: {fileID: 4649805569744889095, guid: 3da2dd3a369dd46b2bb01be773b8a084,
+    type: 3}
+  planet1Prefab: {fileID: 4649805569744889095, guid: 9e77e123aa37c4a38925ceb4e995840f,
+    type: 3}
+  positionVector1Prefab: {fileID: 6660150231560391241, guid: d09a11cdb79d14017b328021f87dae72,
+    type: 3}
+  orbit1Prefab: {fileID: 7263056567443626460, guid: c2b6b095bad384a7eb2218fe4532da6b,
+    type: 3}
+  orbitSector1Prefab: {fileID: 0}
+  trail1Prefab: {fileID: 0}
+  forceVector1Prefab: {fileID: 0}
+  planet2Prefab: {fileID: 0}
+  orbitSector2Prefab: {fileID: 0}
+  positionVector2Prefab: {fileID: 0}
+  centerOfMassPrefab: {fileID: 0}
+  angularMomentumVectorPrefab: {fileID: 0}
+  semiMajorAxisPrefab: {fileID: 0}
+  semiMinorAxisPrefab: {fileID: 0}
+  ellipseCenterPrefab: {fileID: 0}
+  star: {fileID: 0}
+  planet1: {fileID: 0}
+  centerOfMass: {fileID: 0}
+  positionVector1: {fileID: 0}
+  orbit1: {fileID: 0}
+  orbitSector1: {fileID: 0}
+  planetTrailLR: {fileID: 0}
+  forceVector1: {fileID: 0}
+  angularMomentumVector: {fileID: 0}
+  planet2: {fileID: 0}
+  orbitSector2: {fileID: 0}
+  positionVector2: {fileID: 0}
+  semiMajorAxis: {fileID: 0}
+  semiMinorAxis: {fileID: 0}
+  ellipseCenter: {fileID: 0}
+--- !u!1 &6007851516059903039
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6007851516059903032}
+  - component: {fileID: 6007851516059903034}
+  - component: {fileID: 6007851516059903033}
+  m_Layer: 0
+  m_Name: Kepler Sim 5 (Slide 8)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6007851516059903032
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6007851516059903039}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6007851514375154930}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6007851516059903034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6007851516059903039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b7f0a8319d6e46428161c4b9fd40d15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paused: 0
+  numSubsteps: 10
+  resetAfterOnePeriod: 1
+  unitTime: 0
+  unitLength: 0
+  unitMass: 0
+  timeScale: 0.2
+  starMass: 1
+  starRadius: 0.3
+  starPosition: {x: 0, y: 0}
+  starAtFocus: 0
+  planet1Radius: 0.06
+  perihelionDistance: 1
+  startAtPerihelion: 0
+  eccentricity: 0.3
+  orbitDirection: 1
+  planet2Radius: 1
+  initPlanet2OffsetAngle: 45
+  star: {fileID: 0}
+  planet1: {fileID: 0}
+  planet2: {fileID: 0}
+  theta1: 0
+  theta2: 0
+  resetTimer: 0
+  currentForce: {x: 0, y: 0, z: 0}
+--- !u!114 &6007851516059903033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6007851516059903039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e647ccdc2668f41e3ae6acea3ab932af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  starPrefab: {fileID: 4649805569744889095, guid: 3da2dd3a369dd46b2bb01be773b8a084,
+    type: 3}
+  planet1Prefab: {fileID: 4649805569744889095, guid: 36c42e4487387446799b97d4e6a4eee0,
+    type: 3}
+  positionVector1Prefab: {fileID: 6660150231560391241, guid: 338baf96693cf41b295c099ad3bc74e6,
+    type: 3}
+  orbit1Prefab: {fileID: 7263056567443626460, guid: 31a1961c80cc448b08f9d894f47e8315,
+    type: 3}
+  orbitSector1Prefab: {fileID: 0}
+  trail1Prefab: {fileID: 0}
+  forceVector1Prefab: {fileID: 0}
+  planet2Prefab: {fileID: 0}
+  orbitSector2Prefab: {fileID: 0}
+  positionVector2Prefab: {fileID: 0}
+  centerOfMassPrefab: {fileID: 0}
+  angularMomentumVectorPrefab: {fileID: 0}
+  semiMajorAxisPrefab: {fileID: 6660150231560391241, guid: c914934c9aa9a47eea494629efc50746,
+    type: 3}
+  semiMinorAxisPrefab: {fileID: 6660150231560391241, guid: 29e936dac31734474a6260c1e94f4f21,
+    type: 3}
+  ellipseCenterPrefab: {fileID: 0}
+  star: {fileID: 0}
+  planet1: {fileID: 0}
+  centerOfMass: {fileID: 0}
+  positionVector1: {fileID: 0}
+  orbit1: {fileID: 0}
+  orbitSector1: {fileID: 0}
+  planetTrailLR: {fileID: 0}
+  forceVector1: {fileID: 0}
+  angularMomentumVector: {fileID: 0}
+  planet2: {fileID: 0}
+  orbitSector2: {fileID: 0}
+  positionVector2: {fileID: 0}
+  semiMajorAxis: {fileID: 0}
+  semiMinorAxis: {fileID: 0}
+  ellipseCenter: {fileID: 0}
